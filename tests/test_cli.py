@@ -50,6 +50,7 @@ def test_module_entrypoint_runs_main(
     input_file = tmp_path / "transactions.txt"
     input_file.write_text("pears,4\n", encoding="utf-8")
 
+    sys.modules.pop("app.__main__", None)
     monkeypatch.setattr(sys, "argv", ["python", str(input_file)])
 
     with pytest.raises(SystemExit) as exc_info:
