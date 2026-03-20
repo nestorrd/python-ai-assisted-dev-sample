@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable, Mapping
 
-
 def parse_transactions(text: str) -> list[tuple[str, int]]:
     """Parse inventory transactions from comma-separated text."""
     transactions: list[tuple[str, int]] = []
@@ -42,7 +41,6 @@ def format_report(inventory: Mapping[str, int]) -> str:
     return "\n".join(
         f"{item}: {quantity}" for item, quantity in sorted(inventory.items())
     )
-
 
 def _split_transaction(line: str, line_number: int) -> tuple[str, int]:
     parts = [part.strip() for part in line.split(",", maxsplit=1)]

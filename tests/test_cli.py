@@ -44,6 +44,28 @@ def test_main_exits_for_invalid_transaction_file(
     assert "Error: line 1: delta must be an integer" in captured.err
 
 
+def test_main_starts_web_server_when_serve_is_set(
+    tmp_path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from app.__main__ import main
+
+    input_file = tmp_path / "transactions.txt"
+    input_file.write_text("apples,1\n", encoding="utf-8")
+    captured: dict[str, object] = {}
+
+    def fake_serve_inventory(input_path, host: str, port: int) -> None:
+        captured["input_path"] = input_path
+        captured["host"] = host
+        captured["port"] = port
+
+    monkeypatch.setattr("app.__main__.serve_inventory", fake_serve_inventory)
+
+    assert main([str(input_file), "--serve", "--host", "localhost", "--port", "9000"]) == 0
+    assert str(captured["input_path"]).endswith("transactions.txt")
+    assert captured["host"] == "localhost"
+    assert captured["port"] == 9000
+
+
 def test_module_entrypoint_runs_main(
     tmp_path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
