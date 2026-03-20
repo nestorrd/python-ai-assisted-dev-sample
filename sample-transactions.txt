@@ -1,0 +1,8 @@
+apples,3
+bananas,2
+apples,-1
+pears,0
+apples,-2
+pears,1
+pears,2
+oranges,22
