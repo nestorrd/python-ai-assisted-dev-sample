@@ -3,10 +3,10 @@ import sys
 
 import pytest
 
-from app.__main__ import main
-
 
 def test_main_prints_inventory_report(tmp_path, capsys: pytest.CaptureFixture[str]) -> None:
+    from app.__main__ import main
+
     input_file = tmp_path / "transactions.txt"
     input_file.write_text("apples,3\nbananas,2\napples,-1\n", encoding="utf-8")
 
@@ -18,6 +18,8 @@ def test_main_prints_inventory_report(tmp_path, capsys: pytest.CaptureFixture[st
 
 
 def test_main_exits_for_missing_file(capsys: pytest.CaptureFixture[str]) -> None:
+    from app.__main__ import main
+
     with pytest.raises(SystemExit) as exc_info:
         main(["missing.txt"])
 
@@ -29,6 +31,8 @@ def test_main_exits_for_missing_file(capsys: pytest.CaptureFixture[str]) -> None
 def test_main_exits_for_invalid_transaction_file(
     tmp_path, capsys: pytest.CaptureFixture[str]
 ) -> None:
+    from app.__main__ import main
+
     input_file = tmp_path / "transactions.txt"
     input_file.write_text("apples,not-a-number\n", encoding="utf-8")
 
