@@ -6,7 +6,13 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.vscode-python-envs",
+        "mhutchie.git-graph",
+        "github.vscode-github-actions",
+        "GitHub.copilot-chat",
+        "DavidAnson.vscode-markdownlint"
       ]
     }
   }
