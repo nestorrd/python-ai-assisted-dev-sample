@@ -8,7 +8,7 @@ After each user interaction, say which files you have read and used below .githu
 
 ## Update README.md
 
-After each user interaction, update `README.md` to reflect the changes mad, if needed.
+After each user interaction, update `README.md` to reflect the changes made, if needed.
 
 ## Path-Specific Instructions
 
