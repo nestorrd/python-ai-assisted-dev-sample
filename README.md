@@ -83,7 +83,36 @@ pytest --cov=app --cov-branch --cov-report=term-missing
 
 ### Documentation
 - [Agent Overview](.github/agents/test-expert/README.md)
-- [Complete Specification](.github/agents/test-expert/agent.md)
+- [Complete Specification](.github/agents/test-expert.agent.md)
 - [Quick Reference](.github/agents/test-expert/QUICK_REFERENCE.md)
 - [Implementation Guide](.github/agents/test-expert/IMPLEMENTATION_GUIDE.md)
 - [Technical Configuration](.github/agents/test-expert/CONFIG.md)
+
+## Frontend Expert Agent
+
+The **Frontend Expert** agent helps design and build modern frontends for Python applications with a pragmatic bias toward Python-first stacks and maintainable UI architecture.
+
+### Quick Start
+```text
+@frontend-expert Build a polished localhost dashboard for this Python app.
+Choose the best frontend architecture, favor a Python-first stack, and make it responsive and accessible.
+```
+
+### Recommended Stack Bias
+- **FastHTML + HTMX** for server-first dashboards, forms, tables, and workflow screens
+- **NiceGUI** for Python-native internal tools and rapid dashboards
+- **Reflex** for richer full-stack Python applications
+- **FastAPI + React/Vite** only when heavy client-side state is justified
+
+### Features
+- Purposeful visual systems with stronger hierarchy and design tokens
+- Responsive layouts with explicit loading, empty, error, and success states
+- Pragmatic architecture choices that avoid unnecessary SPA complexity
+- Clean integration between Python code, templates, APIs, and live updates
+
+### Documentation
+- [Agent Overview](.github/agents/frontend-expert/README.md)
+- [Complete Specification](.github/agents/frontend-expert.agent.md)
+- [Quick Reference](.github/agents/frontend-expert/QUICK_REFERENCE.md)
+- [Implementation Guide](.github/agents/frontend-expert/IMPLEMENTATION_GUIDE.md)
+- [Technical Configuration](.github/agents/frontend-expert/CONFIG.md)
