@@ -116,3 +116,17 @@ Choose the best frontend architecture, favor a Python-first stack, and make it r
 - [Quick Reference](.github/agents/frontend-expert/QUICK_REFERENCE.md)
 - [Implementation Guide](.github/agents/frontend-expert/IMPLEMENTATION_GUIDE.md)
 - [Technical Configuration](.github/agents/frontend-expert/CONFIG.md)
+
+## Feature Prompt
+
+Use the workspace prompt below when you want Copilot to implement a feature while following this repository's development rules.
+
+### Quick Start
+```text
+/Implement Feature Add support for a new transaction type and update the CLI output.
+```
+
+The prompt automatically directs Copilot to use the repository instructions, TDD workflow, test header rules, README updates, and local ADR process.
+
+### Prompt File
+- [.github/prompts/implement-feature.prompt.md](.github/prompts/implement-feature.prompt.md)
