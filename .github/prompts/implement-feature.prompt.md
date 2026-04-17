@@ -5,7 +5,7 @@ argument-hint: "Describe the feature to implement"
 agent: "agent"
 model: "GPT-5 (copilot)"
 ---
-
+<!-- https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files -->
 Implement the feature described in the user's prompt for this repository.
 
 Before editing anything, read and follow these repository rules and assets:

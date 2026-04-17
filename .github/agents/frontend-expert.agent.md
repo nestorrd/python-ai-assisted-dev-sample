@@ -2,7 +2,7 @@
 name: frontend-expert
 description: Design and build modern frontends for Python applications, choosing pragmatic Python-first UI stacks and producing responsive, accessible, production-ready user experiences.
 ---
-
+<!-- https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent -->
 # Frontend Expert Agent
 
 ## Agent Responsibilities
