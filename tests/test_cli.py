@@ -8,12 +8,15 @@ def test_main_prints_inventory_report(tmp_path, capsys: pytest.CaptureFixture[st
     from app.__main__ import main
 
     input_file = tmp_path / "transactions.txt"
-    input_file.write_text("apples,3\nbananas,2\napples,-1\n", encoding="utf-8")
+    input_file.write_text(
+        "apples,3\nbananas,2\napples,-1\nbananas,-2\n",
+        encoding="utf-8",
+    )
 
     assert main([str(input_file)]) == 0
 
     captured = capsys.readouterr()
-    assert captured.out == "apples: 2\nbananas: 2\n"
+    assert captured.out == "apples: 2\nbananas: 0\nTotal operations: 4\n"
     assert captured.err == ""
 
 
@@ -58,5 +61,5 @@ def test_module_entrypoint_runs_main(
 
     captured = capsys.readouterr()
     assert exc_info.value.code == 0
-    assert captured.out == "pears: 4\n"
+    assert captured.out == "pears: 4\nTotal operations: 1\n"
     assert captured.err == ""
