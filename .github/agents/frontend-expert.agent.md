@@ -1,6 +1,7 @@
 ---
 name: frontend-expert
 description: Design and build modern frontends for Python applications, choosing pragmatic Python-first UI stacks and producing responsive, accessible, production-ready user experiences.
+model: Claude Opus 4.6 (1M context)(Internal only) (copilot)
 ---
 <!-- https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent -->
 # Frontend Expert Agent

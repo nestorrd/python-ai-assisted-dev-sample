@@ -3,7 +3,7 @@ name: "Implement Feature"
 description: "Implement a repository feature request while following this project's TDD, test header, README, and ADR requirements. Use when you want Copilot to build or change functionality in this workspace."
 argument-hint: "Describe the feature to implement"
 agent: "agent"
-model: "GPT-5 (copilot)"
+model: Claude Sonnet 4.5 (copilot)
 ---
 <!-- https://docs.github.com/en/copilot/tutorials/customization-library/prompt-files -->
 Implement the feature described in the user's prompt for this repository.
