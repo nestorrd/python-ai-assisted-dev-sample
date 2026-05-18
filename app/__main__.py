@@ -15,7 +15,8 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         text = Path(args.input_file).read_text(encoding="utf-8")
-        report = format_report(summarize_inventory(parse_transactions(text)))
+        transactions = parse_transactions(text)
+        report = format_report(summarize_inventory(transactions))
     except OSError as exc:
         parser.exit(
             status=1,
@@ -25,6 +26,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.exit(status=1, message=f"Error: {exc}\n")
 
     print(report)
+    print(f"Total operations: {len(transactions)}")
     return 0
 
 
