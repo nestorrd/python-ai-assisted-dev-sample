@@ -45,7 +45,7 @@ Minimal Python 3.11 application for parsing inventory transactions and producing
 `-- README.md
 ```
 
-## Getting Started
+## Getting Startedd
 
 ```bash
 python -m pip install -e .[dev]
