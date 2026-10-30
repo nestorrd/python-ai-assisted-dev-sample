@@ -2,21 +2,21 @@
 
 # Repository-Wide Copilot Instructions
 
-## Verify Copilot is using instructions files
+## Repository guidance
 
-After each user interaction, say which files you have read and used below .github folder.
-
-## Update README.md
-
-After each user interaction, update `README.md` to reflect the changes made, if needed.
+Keep `README.md` accurate when a change affects project behavior, usage, structure, or
+developer workflows. Do not change it for unrelated edits that do not affect what
+readers need to know.
 
 ## Path-Specific Instructions
 
-This repository uses path-specific custom instructions to enforce different workflows depending on which folder you are modifying.
+This repository uses path-specific custom instructions for Python application and test
+files. Their availability can vary by Copilot product and IDE; consult the links in
+`README.md` for current GitHub documentation.
 
 ### When modifying `app/` folder
 
-**Always consult and follow** [.github/instructions/app.instructions.md](.github/instructions/app.instructions.md) before making any changes to files under `app/`.
+**Always consult and follow** [app.instructions.md](instructions/app.instructions.md) before making any changes to files under `app/`.
 
 Current requirements:
 - TDD (Test-Driven Development) workflow is mandatory
@@ -25,7 +25,7 @@ Current requirements:
 
 ### When modifying `tests/` folder
 
-**Always consult and follow** [.github/instructions/tests.instructions.md](.github/instructions/tests.instructions.md) before making any changes to files under `tests/`.
+**Always consult and follow** [tests.instructions.md](instructions/tests.instructions.md) before making any changes to files under `tests/`.
 
 Current requirements:
 - Every new test function must include an author header (`# Author:` and `# Date:`) immediately above the function signature
@@ -35,7 +35,7 @@ Current requirements:
 ### How to use path-specific instructions
 
 1. Before making changes to any file, identify its folder
-2. Check if there's a corresponding instructions file in `.github/instructions/`
+2. Check if there's a corresponding instructions file in `instructions/`
 3. Read and follow that file's rules before implementing changes
 4. These instructions take precedence over general guidance
 

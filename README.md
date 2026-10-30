@@ -12,17 +12,7 @@ Minimal Python 3.11 application for parsing inventory transactions and producing
 |   |-- copilot-instructions.md
 |   |-- agents/
 |   |   |-- frontend-expert.agent.md
-|   |   |-- test-expert.agent.md
-|   |   |-- frontend-expert/
-|   |   |   |-- README.md
-|   |   |   |-- QUICK_REFERENCE.md
-|   |   |   |-- IMPLEMENTATION_GUIDE.md
-|   |   |   `-- CONFIG.md
-|   |   `-- test-expert/
-|   |       |-- README.md
-|   |       |-- QUICK_REFERENCE.md
-|   |       |-- IMPLEMENTATION_GUIDE.md
-|   |       `-- CONFIG.md
+|   |   `-- test-expert.agent.md
 |   |-- instructions/
 |   |   |-- app.instructions.md
 |   |   `-- tests.instructions.md
@@ -86,32 +76,38 @@ def test_example() -> None:
 
 See [.github/instructions/tests.instructions.md](.github/instructions/tests.instructions.md) for details.
 
-## Copilot Instructions Overview
+## GitHub Copilot customizations
 
-The repository uses layered instructions in `.github`:
+This example demonstrates repository-wide instructions, path-specific instructions,
+custom agents, a reusable skill, and a prompt file:
 
 - `.github/copilot-instructions.md`
-  - Repository-wide rules for workflow, README maintenance, and local ADR logging in `log/`.
+  - Repository-wide instructions.
 - `.github/instructions/app.instructions.md`
-  - Any changes in `app/` must follow TDD: fail first, pass, refactor, then verify full coverage.
+  - TDD and coverage guidance for Python application files.
 - `.github/instructions/tests.instructions.md`
   - Every new `test_` function in `tests/` must include `# Author:` and `# Date:` headers.
 - `.github/skills/tdd-python/SKILL.md`
-  - Detailed Red-Green-Refactor guidance used when implementing Python code.
-
-## Available Agents (Overview)
-
-- `test-expert`
-  - Focused on generating and improving tests with strong line and branch coverage.
-- `frontend-expert`
-  - Focused on building modern, responsive frontends for Python applications.
-
-Agent definitions and references are under `.github/agents/`.
-
-## Prompt
-
+  - Reusable Red-Green-Refactor workflow.
+- `.github/agents/*.agent.md`
+  - `test-expert` helps improve test coverage; `frontend-expert` advises on Python UI architecture.
 - `.github/prompts/implement-feature.prompt.md`
-  - Reusable prompt for implementing features while following repository rules.
+  - Reusable feature-implementation prompt for supported IDEs.
+
+Prompt files remain supported by GitHub Copilot, but are in public preview and
+availability varies by IDE and version. They are invoked for a specific interaction;
+repository instructions apply automatically within their supported scope.
+
+For current format and compatibility details, see the [official GitHub Copilot
+documentation](#official-github-copilot-documentation).
+
+## Official GitHub Copilot documentation
+
+- [Custom instructions](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/customize-copilot/configure-custom-instructions/add-repository-instructions-in-your-ide)
+- [Custom agents](https://docs.github.com/en/copilot/concepts/customizations/custom-agents)
+- [Custom agent configuration reference](https://docs.github.com/en/copilot/reference/custom-agents-configuration)
+- [Agent skills](https://docs.github.com/en/copilot/concepts/customizations/agent-skills)
+- [Prompt files](https://docs.github.com/en/copilot/concepts/prompting-and-context/prompt-files)
 
 ## CI
 

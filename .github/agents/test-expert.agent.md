@@ -1,7 +1,6 @@
 ---
 name: test-expert
 description: Generate comprehensive test suites that identify and cover uncovered source code, ensuring 100% line and branch coverage with production-grade test architecture.
-model: GPT-5 mini (copilot)
 ---
 <!-- https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent -->
 # Test Expert Agent
@@ -356,4 +355,3 @@ This agent continuously:
 - Identifies brittle tests that may fail with code changes
 - Recommends test organization improvements
 - Tracks coverage trends across time
-
