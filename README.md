@@ -114,7 +114,7 @@ This sample can demonstrate a supervised GitHub Copilot coding-agent task:
 1. **Check availability.** The repository must have GitHub Copilot coding agent enabled for the account and repository, with the required organization policies and GitHub Actions access. Availability and controls depend on the Copilot plan and organization settings.
 2. **Create a focused issue.** For example: “Add a transaction report option.” Include the desired behavior, acceptance criteria, and likely files such as `app/__main__.py` and `tests/test_cli.py`.
 3. **Assign the issue to Copilot.** On GitHub, use **Assign to Copilot**. The coding agent works asynchronously and opens a draft pull request; review its changes and ask for revisions before marking it ready.
-4. **Review CI.** The pull request triggers `.github/workflows/ci.yml`, which installs the development dependencies and runs `pytest`. Review the diff and checks yourself before merging.
+4. **Review CI.** Copilot-created pull requests may require approval before GitHub Actions workflows run. After reviewing the changes, click **Approve and run workflows** if that option is shown; then inspect the `.github/workflows/ci.yml` result, which installs the development dependencies and runs `pytest`. Review the diff and checks yourself before merging.
 
 The optional `.github/workflows/copilot-setup-steps.yml` prepares Python 3.11 and
 installs this project's development dependencies in the coding-agent environment.

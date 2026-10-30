@@ -6,7 +6,7 @@ tools:
   - read
   - search
 # Optional: enable only after configuring the matching approved MCP server.
-# - approved-inventory/lookup_item
+#   - approved-inventory/lookup_item
 # Optional custom MCP example only. This repository does not provide a server.
 # Uncomment and replace the command and tool name only after configuring an
 # approved MCP server for the GitHub Copilot environment.
