@@ -19,6 +19,8 @@ Enforces the Red-Green-Refactor cycle when adding new code to a Python project. 
 - `pytest` installed (check with `pytest --version`; install via `pip install pytest`)
 - An existing test directory (e.g., `tests/`) with at least an `__init__.py` or `conftest.py`, or a flat test file layout
 
+For this repository's inventory example, consult [Inventory sample behavior](references/INVENTORY_TEST_CASES.md) when working on transaction parsing, summaries, reports, or the CLI.
+
 ## Step-by-Step Workflows
 
 ### Red-Green-Refactor Cycle
@@ -98,3 +100,4 @@ Repeat the Red-Green-Refactor cycle for each behaviour:
 - [pytest documentation](https://docs.pytest.org/)
 - [Test-Driven Development by Example — Kent Beck](https://www.oreilly.com/library/view/test-driven-development/0321146530/)
 - [TDD Red-Green-Refactor cheatsheet](https://www.jamesshore.com/v2/blog/2005/red-green-refactor)
+- [Inventory sample behavior](references/INVENTORY_TEST_CASES.md) — current behavior and matching tests in this repository.
